@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+header {
+  background: rgb(14, 107, 107);
+  color: white;
+  min-height: 250px;
+  padding: 1rem;
+}
+.tags {
+  display: flex;
+  gap: 1rem 3rem;
+  flex-wrap: wrap;
+}
+
+.article-author {
+  background-color: #000;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
