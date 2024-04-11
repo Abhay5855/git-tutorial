@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,25 +20,151 @@ video {
   max-width: 100%;
 }
 
-header {
-  background: rgb(14, 107, 107);
-  color: white;
-  min-height: 250px;
-  padding: 1rem;
-}
-.tags {
-  display: flex;
-  gap: 1rem 3rem;
-  flex-wrap: wrap;
+.grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  grid-template-rows: 130px 2fr 1fr;
+  background: #e5e5e5;
 }
 
-.article-author {
-  background-color: #000;
-  color: #fff;
+.title {
+  background-color: yellow;
+  color: #000;
+  grid-row: 1;
+  grid-column: 1 / 3;
 }
+
+.content1 {
+  grid-row: 2 /4;
+  grid-column: 1/2;
+  background-color: #000;
+}
+.content2 {
+  grid-row: 3/4;
+  grid-row: 2 / 4;
+  background-color: orange;
+}
+
+.Quote {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+.image {
+  grid-row: 1 / 3;
+  grid-column: 2 / 5;
+}
+
+.score {
+  grid-row: 3;
+  background-color: aliceblue;
+} */
 
 .grid {
+  width: 95vw;
+  height: 800px;
+  outline: 6px solid #121219;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-rows: 85px 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  background: #e5e5e5;
+}
+
+.item {
+  border: none;
+  text-shadow: none;
+  color: #000;
+}
+
+.title {
+  background: #f4d434;
+  color: black;
+  grid-row: 1;
+  grid-column: 1/3;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.emph {
+  transform: scaleY(1.5);
+  white-space: nowrap;
+}
+
+.image {
+  background: url(https://gedd.ski/img/divinity-dragon.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  grid-row: 1/ 3;
+  grid-column: 2 / 5;
+}
+
+.content1 {
+  /* grid-row: 2 / 4;
+  grid-column: 1 / 2;
+  overflow: hidden;
+  font-size: 16px;
+  display: block; */
+  grid-row: 2 / 4;
+  grid-column: 1 /2;
+  overflow: hidden;
+}
+
+.content2 {
+  /* grid-row: 3 / 4;
+  grid-column: 2 / 4;
+  overflow: hidden;
+  font-size: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  align-items: start; */
+  grid-row: 3 / 4;
+  grid-column: 2/ 4;
+}
+
+.content1,
+.content2 {
+  /* padding: 10px 20px;
+  font-size: 14px; */
+}
+
+.Quote {
+  grid-row: 2;
+  grid-column: 4;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  align-self: end;
+  justify-self: start;
+  position: relative;
+  color: #e5d54f;
+  border-left: 10px solid #e5d54f;
+  padding: 10px;
+  right: 125px;
+  bottom: 6%;
+  text-transform: uppercase;
+  font-size: calc(12px + 1.1vw);
+  
+}
+
+.score {
+  /* grid-row: 3;
+  background: #f4d434;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 5px;
+  font-size: calc(12px + 2.6vw);
+  font-weight: bold;
+  text-transform: uppercase; */
+  background: #f4d434;
+  width: 70%;
+  height: 70%;
+  padding: 5px;
+  grid-row: 3;
 }
